@@ -17,6 +17,8 @@
 		DC20AADD216F2D6000F1CF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC20AADB216F2D6000F1CF3F /* LaunchScreen.storyboard */; };
 		DC20AAE8216F2D6000F1CF3F /* MyImageSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20AAE7216F2D6000F1CF3F /* MyImageSearchTests.swift */; };
 		DC20AAF3216F2D6000F1CF3F /* MyImageSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20AAF2216F2D6000F1CF3F /* MyImageSearchUITests.swift */; };
+		DCC1DCB921708FDA003298F4 /* outline_photo_library_black_18dp.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */; };
+		DCC1DCBB217090C6003298F4 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1DCBA217090C6003298F4 /* listCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		DC20AAEE216F2D6000F1CF3F /* MyImageSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyImageSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC20AAF2216F2D6000F1CF3F /* MyImageSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageSearchUITests.swift; sourceTree = "<group>"; };
 		DC20AAF4216F2D6000F1CF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline_photo_library_black_18dp.png; sourceTree = "<group>"; };
+		DCC1DCBA217090C6003298F4 /* listCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		E06986446AB3696E20F9613C /* Pods-MyImageSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageSearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyImageSearchUITests/Pods-MyImageSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F495DA4BD7567995E1F8AE08 /* Pods_MyImageSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyImageSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,12 +141,14 @@
 		DC20AAD1216F2D5F00F1CF3F /* MyImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DCC1DCB721708FB7003298F4 /* image */,
 				DC20AAD2216F2D5F00F1CF3F /* AppDelegate.swift */,
 				DC20AAD4216F2D5F00F1CF3F /* ViewController.swift */,
 				DC20AAD6216F2D5F00F1CF3F /* Main.storyboard */,
 				DC20AAD9216F2D6000F1CF3F /* Assets.xcassets */,
 				DC20AADB216F2D6000F1CF3F /* LaunchScreen.storyboard */,
 				DC20AADE216F2D6000F1CF3F /* Info.plist */,
+				DCC1DCBA217090C6003298F4 /* listCell.swift */,
 			);
 			path = MyImageSearch;
 			sourceTree = "<group>";
@@ -163,6 +169,14 @@
 				DC20AAF4216F2D6000F1CF3F /* Info.plist */,
 			);
 			path = MyImageSearchUITests;
+			sourceTree = "<group>";
+		};
+		DCC1DCB721708FB7003298F4 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC1DCB921708FDA003298F4 /* outline_photo_library_black_18dp.png in Resources */,
 				DC20AADD216F2D6000F1CF3F /* LaunchScreen.storyboard in Resources */,
 				DC20AADA216F2D6000F1CF3F /* Assets.xcassets in Resources */,
 				DC20AAD8216F2D5F00F1CF3F /* Main.storyboard in Resources */,
@@ -301,15 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyImageSearch/Pods-MyImageSearch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
@@ -323,15 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MyImageSearch-checkManifestLockResult.txt",
 			);
@@ -345,15 +352,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MyImageSearchTests-checkManifestLockResult.txt",
 			);
@@ -367,15 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MyImageSearchUITests-checkManifestLockResult.txt",
 			);
@@ -392,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC20AAD5216F2D5F00F1CF3F /* ViewController.swift in Sources */,
+				DCC1DCBB217090C6003298F4 /* listCell.swift in Sources */,
 				DC20AAD3216F2D5F00F1CF3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
