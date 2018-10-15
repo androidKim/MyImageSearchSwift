@@ -17,6 +17,10 @@
 		DC20AADD216F2D6000F1CF3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC20AADB216F2D6000F1CF3F /* LaunchScreen.storyboard */; };
 		DC20AAE8216F2D6000F1CF3F /* MyImageSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20AAE7216F2D6000F1CF3F /* MyImageSearchTests.swift */; };
 		DC20AAF3216F2D6000F1CF3F /* MyImageSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20AAF2216F2D6000F1CF3F /* MyImageSearchUITests.swift */; };
+		DCB53D592174280300F56632 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB53D582174280300F56632 /* KakaoOpenSDK.framework */; };
+		DCB53D5C2174557000F56632 /* img_documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB53D5B2174557000F56632 /* img_documents.swift */; };
+		DCC1DCB921708FDA003298F4 /* outline_photo_library_black_18dp.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */; };
+		DCC1DCBB217090C6003298F4 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1DCBA217090C6003298F4 /* listCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		DC20AAEE216F2D6000F1CF3F /* MyImageSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyImageSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC20AAF2216F2D6000F1CF3F /* MyImageSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageSearchUITests.swift; sourceTree = "<group>"; };
 		DC20AAF4216F2D6000F1CF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCB53D582174280300F56632 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		DCB53D5B2174557000F56632 /* img_documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = img_documents.swift; sourceTree = "<group>"; };
+		DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline_photo_library_black_18dp.png; sourceTree = "<group>"; };
+		DCC1DCBA217090C6003298F4 /* listCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		E06986446AB3696E20F9613C /* Pods-MyImageSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageSearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyImageSearchUITests/Pods-MyImageSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F495DA4BD7567995E1F8AE08 /* Pods_MyImageSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyImageSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -67,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56904506A862955C0A02EB93 /* Pods_MyImageSearch.framework in Frameworks */,
+				DCB53D592174280300F56632 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +101,7 @@
 		76F512B1C6D23CB14E188872 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCB53D582174280300F56632 /* KakaoOpenSDK.framework */,
 				8418A30580809345F14DA79A /* Pods_MyImageSearch.framework */,
 				F495DA4BD7567995E1F8AE08 /* Pods_MyImageSearchTests.framework */,
 				7E4EEBEF13D7A0033421F303 /* Pods_MyImageSearchUITests.framework */,
@@ -137,12 +147,15 @@
 		DC20AAD1216F2D5F00F1CF3F /* MyImageSearch */ = {
 			isa = PBXGroup;
 			children = (
+				DCB53D5A2174315B00F56632 /* structure */,
+				DCC1DCB721708FB7003298F4 /* resource */,
 				DC20AAD2216F2D5F00F1CF3F /* AppDelegate.swift */,
 				DC20AAD4216F2D5F00F1CF3F /* ViewController.swift */,
 				DC20AAD6216F2D5F00F1CF3F /* Main.storyboard */,
 				DC20AAD9216F2D6000F1CF3F /* Assets.xcassets */,
 				DC20AADB216F2D6000F1CF3F /* LaunchScreen.storyboard */,
 				DC20AADE216F2D6000F1CF3F /* Info.plist */,
+				DCC1DCBA217090C6003298F4 /* listCell.swift */,
 			);
 			path = MyImageSearch;
 			sourceTree = "<group>";
@@ -163,6 +176,22 @@
 				DC20AAF4216F2D6000F1CF3F /* Info.plist */,
 			);
 			path = MyImageSearchUITests;
+			sourceTree = "<group>";
+		};
+		DCB53D5A2174315B00F56632 /* structure */ = {
+			isa = PBXGroup;
+			children = (
+				DCB53D5B2174557000F56632 /* img_documents.swift */,
+			);
+			path = structure;
+			sourceTree = "<group>";
+		};
+		DCC1DCB721708FB7003298F4 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC1DCB921708FDA003298F4 /* outline_photo_library_black_18dp.png in Resources */,
 				DC20AADD216F2D6000F1CF3F /* LaunchScreen.storyboard in Resources */,
 				DC20AADA216F2D6000F1CF3F /* Assets.xcassets in Resources */,
 				DC20AAD8216F2D5F00F1CF3F /* Main.storyboard in Resources */,
@@ -301,17 +331,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyImageSearch/Pods-MyImageSearch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/moa/moa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/moa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -323,15 +353,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MyImageSearch-checkManifestLockResult.txt",
 			);
@@ -345,15 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MyImageSearchTests-checkManifestLockResult.txt",
 			);
@@ -367,15 +389,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MyImageSearchUITests-checkManifestLockResult.txt",
 			);
@@ -392,6 +410,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC20AAD5216F2D5F00F1CF3F /* ViewController.swift in Sources */,
+				DCB53D5C2174557000F56632 /* img_documents.swift in Sources */,
+				DCC1DCBB217090C6003298F4 /* listCell.swift in Sources */,
 				DC20AAD3216F2D5F00F1CF3F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,9 +518,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -552,8 +573,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-all_load";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -568,7 +590,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85S53JZ66L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyImageSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -576,7 +603,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.midas.MyImageSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -587,7 +614,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85S53JZ66L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MyImageSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.midas.MyImageSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
