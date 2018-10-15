@@ -31,17 +31,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let pInfo:img_documents =  m_arrItems[indexPath.row] as! img_documents
         cell.lb_Title.text = pInfo.image_url as String
         cell.iv_Main.moa.url = pInfo.image_url as String
-        //setImage..  cell.iv_Main
         return cell
     }
     
     /********************** Define **********************/
+    let STR_TYPE_SEARCH_RECENCY:NSString = "recency"
+    let STR_TYPE_SEARCH_ACCURACY:NSString = "accuracy"
+    let ITEM_COUNT:Int = 20
     /********************** Member **********************/
-    let m_str_SearchText:NSString = ""
-    //let menus = ["swift","tableview","example"]
+    var m_str_SearchText:NSString = ""
+    var m_nPageNum:Int = 1;
     var m_arrItems = [img_documents]()
     /********************** Controller **********************/
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var m_tf_Input: UITextField!
+    @IBOutlet weak var m_btn_Search: UIButton!
     /********************** System function **********************/
     //---------------------------------------------------------------------
     //
@@ -65,17 +69,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //
     func initLayout()
     {
-        self.getImageListProc()
+        m_btn_Search.addTarget(self, action: #selector(pressed(sender:)), for: .touchUpInside)
     }
     //---------------------------------------------------------------------
     //
     func getImageListProc()
     {
         let parameters: Parameters = [
-            "query":"hello",
-            "sort":"recency",
-            "page":1,
-            "size":20
+            "query":m_str_SearchText,
+            "sort":STR_TYPE_SEARCH_RECENCY,
+            "page":m_nPageNum,
+            "size":ITEM_COUNT
         ]
         
         Alamofire.request("https://dapi.kakao.com/v2/search/image",
@@ -87,29 +91,55 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             .validate(statusCode: 200..<300)
             .responseJSON {
                 response in
+                
+                /*
                 if let JSON = response.result.value
                 {
                     print(JSON)
                 }
-                
+                */
                 
                 if((response.result.value) != nil)
                 {
+                    self.m_nPageNum+=1;
+                    
                     let swiftyJsonVar = JSON(response.result.value!)
                     print(swiftyJsonVar)
                     // Getting an array of string from a JSON Array
                     let arraydocuments =  swiftyJsonVar["documents"].arrayValue
-                    for i in 0..<arraydocuments.count {    // 0 based index range
+                    // 0 based index range
+                    for i in 0..<arraydocuments.count
+                    {
                         var pInfo:img_documents = img_documents.build(json: arraydocuments[i])!
                         self.m_arrItems.append(pInfo)
                     }
                 }
                 
-                DispatchQueue.main.async{
+                //UIThread..
+                DispatchQueue.main.async
+                {
                     //Now reload the tableView
                     self.tableview.reloadData()
                 }
         }
+    }
+    
+    /********************** listener **********************/
+    //-------------------------------------------------------------------
+    //
+    func onClickSearchBtn()
+    {
+        var strValue: NSString = m_tf_Input.text as! NSString
+        m_str_SearchText = strValue as NSString;//new search keyword
+        m_nPageNum = 1;//init
+        m_arrItems = [img_documents]()//init
+        self.getImageListProc()
+    }
+    //-------------------------------------------------------------------
+    //
+    @objc func pressed(sender: UIButton!)
+    {
+        onClickSearchBtn()
     }
 }
 
