@@ -18,6 +18,7 @@
 		DC20AAE8216F2D6000F1CF3F /* MyImageSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20AAE7216F2D6000F1CF3F /* MyImageSearchTests.swift */; };
 		DC20AAF3216F2D6000F1CF3F /* MyImageSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC20AAF2216F2D6000F1CF3F /* MyImageSearchUITests.swift */; };
 		DCB53D592174280300F56632 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB53D582174280300F56632 /* KakaoOpenSDK.framework */; };
+		DCB53D5C2174557000F56632 /* img_documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB53D5B2174557000F56632 /* img_documents.swift */; };
 		DCC1DCB921708FDA003298F4 /* outline_photo_library_black_18dp.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */; };
 		DCC1DCBB217090C6003298F4 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1DCBA217090C6003298F4 /* listCell.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		DC20AAF2216F2D6000F1CF3F /* MyImageSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageSearchUITests.swift; sourceTree = "<group>"; };
 		DC20AAF4216F2D6000F1CF3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCB53D582174280300F56632 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		DCB53D5B2174557000F56632 /* img_documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = img_documents.swift; sourceTree = "<group>"; };
 		DCC1DCB821708FDA003298F4 /* outline_photo_library_black_18dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline_photo_library_black_18dp.png; sourceTree = "<group>"; };
 		DCC1DCBA217090C6003298F4 /* listCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		E06986446AB3696E20F9613C /* Pods-MyImageSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageSearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyImageSearchUITests/Pods-MyImageSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		DCB53D5A2174315B00F56632 /* structure */ = {
 			isa = PBXGroup;
 			children = (
+				DCB53D5B2174557000F56632 /* img_documents.swift */,
 			);
 			path = structure;
 			sourceTree = "<group>";
@@ -332,11 +335,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyImageSearch/Pods-MyImageSearch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/moa/moa.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/moa.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -405,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC20AAD5216F2D5F00F1CF3F /* ViewController.swift in Sources */,
+				DCB53D5C2174557000F56632 /* img_documents.swift in Sources */,
 				DCC1DCBB217090C6003298F4 /* listCell.swift in Sources */,
 				DC20AAD3216F2D5F00F1CF3F /* AppDelegate.swift in Sources */,
 			);

@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import moa
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     /********************** UITabelView Delegate Function **********************/
@@ -20,14 +21,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return menus.count;
+        return m_arrItems.count;
     }
     //---------------------------------------------------------------------
     //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableview.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! listCell
-        cell.lb_Title.text = menus[indexPath.row]
+        let pInfo:img_documents =  m_arrItems[indexPath.row] as! img_documents
+        cell.lb_Title.text = pInfo.image_url as String
+        cell.iv_Main.moa.url = pInfo.image_url as String
         //setImage..  cell.iv_Main
         return cell
     }
@@ -35,7 +38,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     /********************** Define **********************/
     /********************** Member **********************/
     let m_str_SearchText:NSString = ""
-    let menus = ["swift","tableview","example"]
+    //let menus = ["swift","tableview","example"]
+    var m_arrItems = [img_documents]()
     /********************** Controller **********************/
     @IBOutlet weak var tableview: UITableView!
     /********************** System function **********************/
@@ -46,6 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         self.tableview.dataSource = self
         self.tableview.delegate = self
+        self.tableview.rowHeight = 200.0;
         initLayout()
     }
     //---------------------------------------------------------------------
@@ -91,10 +96,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if((response.result.value) != nil)
                 {
                     let swiftyJsonVar = JSON(response.result.value!)
+                    print(swiftyJsonVar)
                     // Getting an array of string from a JSON Array
                     let arraydocuments =  swiftyJsonVar["documents"].arrayValue
-                    
-                    print(swiftyJsonVar)
+                    for i in 0..<arraydocuments.count {    // 0 based index range
+                        var pInfo:img_documents = img_documents.build(json: arraydocuments[i])!
+                        self.m_arrItems.append(pInfo)
+                    }
+                }
+                
+                DispatchQueue.main.async{
+                    //Now reload the tableView
+                    self.tableview.reloadData()
                 }
         }
     }
