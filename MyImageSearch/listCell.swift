@@ -10,10 +10,9 @@ import UIKit
 
 class listCell: UITableViewCell
 {
-    @IBOutlet var cellView:UIView!
-    @IBOutlet var lb_Title:UILabel!
-    @IBOutlet var iv_Bg:UIImageView!
-    
+    @IBOutlet weak var cellView:UIView!
+    @IBOutlet weak var lb_Title: UILabel!
+    @IBOutlet weak var iv_Main: UIImageView!
     override func awakeFromNib()
     {
         super.awakeFromNib()

@@ -7,6 +7,7 @@ target 'MyImageSearch' do
 
   # Pods for MyImageSearch
   pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'MyImageSearchTests' do
     inherit! :search_paths
